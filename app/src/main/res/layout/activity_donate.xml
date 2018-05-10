@@ -1,0 +1,46 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/donatecls"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="251dp"
+            android:paddingBottom="40dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/personaje_poveste" />
+
+        <Button
+            android:id="@+id/btndonate"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/btnvoladulti"
+            android:text="Doneaza!"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Va multumim!"
+            android:layout_marginLeft="130dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</ScrollView>

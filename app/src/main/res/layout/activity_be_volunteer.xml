@@ -1,0 +1,76 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="251dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/voluntaritcb"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:text="@string/inceput"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textl"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:layout_marginLeft="40dp"
+            android:padding="15dp"
+            android:text="@string/cum_pot_sa_devin_voluntar_al_asociatiei"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/textdescvol"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:text="@string/descrierevoluntariat"
+            android:textAlignment="center" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+
+
+             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnvoladulti"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:background="@drawable/btnvoladulti"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Pachet Voluntari Adulti" />
+        <Button
+            android:id="@+id/btnvolminori"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btnvoladulti"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="Pachet Voluntari Minori" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
