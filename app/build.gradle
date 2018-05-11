@@ -12,6 +12,13 @@ android {
         defaultConfig {
             multiDexEnabled true
         }
+        configurations.all {
+            resolutionStrategy {
+                // Completely exclude the library. Works for transitive
+                // dependencies.
+                exclude group: 'com.google.code.findbugs'
+            }
+        }
     }
     buildTypes {
         release {
@@ -19,25 +26,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    configurations.all {
-        resolutionStrategy {
-            // Completely exclude the library. Works for transitive
-            // dependencies.
-            exclude group: 'com.google.code.findbugs'
-        }
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.1.0'
     //noinspection GradleCompatible
-    implementation 'com.google.firebase:firebase-core:11.0.4'
-    compile 'com.firebase:firebase-client-android:2.5.2+'
-    compile 'com.firebaseui:firebase-ui:0.6.0'
-    compile 'com.mindorks:placeholderview:0.2.7'
-    compile 'com.android.volley:volley:1.0.0'
+    implementation 'com.google.firebase:firebase-core:15.0.2'
+    //noinspection GradleDynamicVersion
+    implementation 'com.firebase:firebase-client-android:2.5.2+'
+    implementation 'com.firebaseui:firebase-ui:0.6.2'
+    implementation 'com.google.firebase:firebase-database:15.0.0'
+    implementation 'com.google.firebase:firebase-auth:15.1.0'
+    implementation 'com.mindorks:placeholderview:0.2.7'
+    implementation 'com.android.volley:volley:1.0.0'
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
