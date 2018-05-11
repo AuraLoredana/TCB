@@ -1,12 +1,14 @@
 package com.aura.popescu.tcb;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ import java.util.Map;
 
 public class Chat extends AppCompatActivity {
     LinearLayout layout;
+    RelativeLayout layout_2;
     ImageView sendButton;
     EditText messageArea;
     ScrollView scrollView;
@@ -30,7 +33,8 @@ public class Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        layout = (LinearLayout)findViewById(R.id.layout1);
+        layout = (LinearLayout) findViewById(R.id.layout1);
+        layout_2 = (RelativeLayout) findViewById(R.id.layout2);
         sendButton = (ImageView)findViewById(R.id.sendButton);
         messageArea = (EditText)findViewById(R.id.messageArea);
         scrollView = (ScrollView)findViewById(R.id.scrollView);
@@ -50,6 +54,7 @@ public class Chat extends AppCompatActivity {
                     map.put("user", UserDetails.username);
                     reference1.push().setValue(map);
                     reference2.push().setValue(map);
+                    messageArea.setText("");
                 }
             }
         });
@@ -94,17 +99,21 @@ public class Chat extends AppCompatActivity {
     public void addMessageBox(String message, int type){
         TextView textView = new TextView(Chat.this);
         textView.setText(message);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 0, 0, 15);
-        textView.setLayoutParams(lp);
+
+        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp2.weight = 1.0f;
 
         if(type == 1) {
+            lp2.gravity = Gravity.RIGHT;
             textView.setBackgroundResource(R.drawable.rounded_corner1);
         }
         else{
+            lp2.gravity = Gravity.LEFT;
             textView.setBackgroundResource(R.drawable.rounded_corner2);
         }
-
+        textView.setLayoutParams(lp2);
+        textView.setPadding(10, 10, 10, 10);
+        lp2.setMargins(10, 10, 10, 10);
         layout.addView(textView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
