@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TCB</string>
+    <string name="compose_email">Compose Email</string>
     <string name="Close" />
     <string name="Open" />
     <string name="desprenoi">Totul a început cu o simplă iniţiativă în primăvara lui 2012 când taximetristul Ion Cristian Roman a dorit să transforme o simplă călătorie prin Bucureşti într-una specială. Clienţii primeau bomboane, puteau asculta o muzica placuta sau puteau primi un tur inedit al Capitalei. Mai apoi taximetristul s-a gândit că ar putea să strângă carti si jucarii pentru copiii din spitale, urmând ca în fiecare sâmbătă să se meargă la Spitalul Clinic de Urgenţă pentru Copii „Marie Curie”. În timp, sute de voluntari şi donatori, parteneri în fapte bune, s-au alăturat în proiectele umanitare dedicate mamelor şi copiilor din spitale! Taxiul cu Bomboane este, de fapt, o metaforă. Este despre gesturi simple care se transformă în fapte bune, despre gesturi mici care pot schimba viaţa celor din jur. Este o metaforă despre faptele bune pe care le poate face oricine, pentru că în acest taxi poate urca toată lumea! Taxiul are acum câteva curse cu destinaţie deosebită: spitalele de pediatrie şi la şcolile cu nevoi speciale din Bucureşti. Voluntarii ajung acolo pentru a aduce zâmbete copiilor bolnavi dar şi celor cu dizabilităţi. Cu alte cuvinte, Taxiul cu Bomboane este ecologic, funcţionează cu dragoste, dragostea celor care aleg să împartă timp liber, îmbrăţişări şi poveşti, copiilor care au nevoie de speranţă şi încurajări. Voluntari de toate vârstele, cu diverse pregătiri profesionale, din Bucureşti, dar şi din străinătate, vin să citească poveşti copiilor din spitale, sau să îi ajute pe cei cu dizabilităţi să îşi găsească un drum în viaţă, stima de sine şi sentimentul de utilitate. Asociaţia are nevoie de susţinere şi de voluntari în toate proiectele pe care le desfăşoară!</string>
@@ -7,4 +8,31 @@
     <string name="inceput">Totul a început cu o simplă iniţiativă în primăvara lui 2012 când taximetristul Ion Cristian Roman a dorit să transforme o simplă călătorie prin Bucureşti într-una specială. Clienţii primeau bomboane, puteau asculta o muzica placuta sau puteau primi un tur inedit al Capitalei. Mai apoi taximetristul s-a gândit că ar putea să strângă carti si jucarii pentru copiii din spitale, urmând ca în fiecare sâmbătă să se meargă la Spitalul Clinic de Urgenţă pentru Copii “Marie Curie”. În timp, sute de voluntari şi donatori, parteneri în fapte bune, s-au alăturat în proiectele umanitare dedicate mamelor şi copiilor din spitale!</string>
     <string name="cum_pot_sa_devin_voluntar_al_asociatiei">CUM POT SA DEVIN VOLUNTAR AL ASOCIATIEI?</string>
     <string name="descrierevoluntariat">Taxiul cu Bomboane funcționează numai prin dragostea și dedicația celor care aleg să își împartă timpul liber cu copiii mai puțin norocoși din capitală. Dacă dorești să ni te alături, descarcă unul din pachetele de voluntariat de mai jos, și intră în contact cu noi!</string>
+    <string name="detaliilenoastre">DETALIILE NOASTRE
+"
+"
+        \n Adresă: Bulevardul Unirii nr. 57, bl. E4, sc. 2, et. 3, sector 3, București, Romania, 030827
+        \n
+"
+"
+        C.I.F. 36389716 – Seria A Nr. De 1025877\n
+"
+"
+        Telefon: 0755-044-247 \n
+"
+"
+        Email: asociatiataxiulcubomboane@gmail.com</string>
+    <string name="donatiidirecte">DONATII DIRECTE\n
+"
+"
+        CEC Bank sucursala Traian\n
+        IBAN RON: RO75CECEB30930RON4291146 \n
+        IBAN EUR: RO75CECEB309C1EUR4291300</string>
+    <string name="undenegasiti">UNDE NE GASITI\n
+"
+"
+        Institutului pentru Sănătate a Mamei și a Copilului “Alfred Rusescu” – marți de la ora 18\n
+        Spitalul Clinic de Urgență pentru Copii “Grigore Alexandrescu” – miercuri de la ora 18\n
+        Spitalul Clinic de Urgență pentru Copii “Marie Sklodowska Curie” – joi de la ora 18\n
+        Bomboland – incinta Flaros SA</string>
 </resources>
