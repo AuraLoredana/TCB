@@ -40,6 +40,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.firebase:firebase-client-android:2.5.2+'
     implementation 'com.firebaseui:firebase-ui:0.6.2'
+    implementation 'com.google.firebase:firebase-storage:15.0.2'
     implementation 'com.google.firebase:firebase-database:15.0.0'
     implementation 'com.google.firebase:firebase-auth:15.1.0'
     implementation 'com.mindorks:placeholderview:0.2.7'

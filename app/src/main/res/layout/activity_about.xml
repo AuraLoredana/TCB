@@ -1,38 +1,42 @@
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@color/colorPrimary">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="251dp"
+            android:paddingBottom="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/multumiri"
-            android:paddingBottom="10dp"/>
+            android:src="@drawable/multumiri" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/o_scurta_istorisire"
             android:layout_marginLeft="120dp"
+            android:gravity="start"
+            android:text="@string/o_scurta_istorisire"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:gravity="start" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_long"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="15dp"
-            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:padding="10dp"
             android:text="@string/desprenoi"
             android:textAlignment="viewStart"
-            android:gravity="start"></TextView>
+            android:textColor="@color/white"
+            android:textStyle="bold"></TextView>
 
 
 

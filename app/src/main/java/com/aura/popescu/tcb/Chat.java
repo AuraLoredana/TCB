@@ -1,5 +1,6 @@
 package com.aura.popescu.tcb;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -16,6 +17,7 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,17 +29,22 @@ public class Chat extends AppCompatActivity {
     EditText messageArea;
     ScrollView scrollView;
     Firebase reference1, reference2;
-
+    Firebase storageRef;
+    private Uri filePath;
+    private ImageView chooseButton;
+    private ImageView uploadBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        layout = (LinearLayout) findViewById(R.id.layout1);
-        layout_2 = (RelativeLayout) findViewById(R.id.layout2);
-        sendButton = (ImageView)findViewById(R.id.sendButton);
-        messageArea = (EditText)findViewById(R.id.messageArea);
-        scrollView = (ScrollView)findViewById(R.id.scrollView);
+        layout = findViewById(R.id.layout1);
+        layout_2 = findViewById(R.id.layout2);
+        sendButton = findViewById(R.id.sendButton);
+        messageArea = findViewById(R.id.messageArea);
+        scrollView = findViewById(R.id.scrollView);
+        uploadBtn = findViewById(R.id.uploadBtn);
+        FirebaseStorage storage = FirebaseStorage.getInstance();
 
         Firebase.setAndroidContext(this);
         reference1 = new Firebase("https://tcbfirebaseproject.firebaseio.com/messages/" + UserDetails.username + "_" + UserDetails.chatWith);
@@ -48,7 +55,7 @@ public class Chat extends AppCompatActivity {
             public void onClick(View v) {
                 String messageText = messageArea.getText().toString();
 
-                if(!messageText.equals("")){
+                if (!messageText.equals("")) {
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("message", messageText);
                     map.put("user", UserDetails.username);
@@ -66,12 +73,12 @@ public class Chat extends AppCompatActivity {
                 String message = map.get("message").toString();
                 String userName = map.get("user").toString();
 
-                if(userName.equals(UserDetails.username)){
+                if (userName.equals(UserDetails.username)) {
                     addMessageBox("You:-\n" + message, 1);
-                }
-                else{
+                } else {
                     addMessageBox(UserDetails.chatWith + ":-\n" + message, 2);
                 }
+
             }
 
             @Override
@@ -96,6 +103,7 @@ public class Chat extends AppCompatActivity {
         });
     }
 
+
     public void addMessageBox(String message, int type){
         TextView textView = new TextView(Chat.this);
         textView.setText(message);
@@ -105,16 +113,23 @@ public class Chat extends AppCompatActivity {
 
         if(type == 1) {
             lp2.gravity = Gravity.RIGHT;
+            textView.setPadding(5, 5, 5, 5);
+            textView.setTextColor(getResources().getColor(R.color.white));
             textView.setBackgroundResource(R.drawable.rounded_corner1);
+
         }
         else{
             lp2.gravity = Gravity.LEFT;
+            textView.setPadding(5, 5, 5, 5);
             textView.setBackgroundResource(R.drawable.rounded_corner2);
         }
         textView.setLayoutParams(lp2);
-        textView.setPadding(10, 10, 10, 10);
+        textView.setTextSize((float) 14.00);
+        //textView.setPadding(10, 10, 10, 10);
         lp2.setMargins(10, 10, 10, 10);
         layout.addView(textView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
+
+
 }
