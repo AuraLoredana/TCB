@@ -18,7 +18,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="120dp"
             android:gravity="start"
             android:text="@string/o_scurta_istorisire"
             android:textAlignment="viewStart"
@@ -36,7 +37,7 @@
             android:text="@string/desprenoi"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
 
 

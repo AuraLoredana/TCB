@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="40dp"
+            android:layout_marginStart="60dp"
             android:fontFamily="sans-serif"
             android:gravity="start"
             android:padding="15dp"
@@ -65,7 +66,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/btnvoladulti"
-            android:text="Pachet Voluntari Adulti" />
+            android:text="@string/pachet_voluntari_adulti" />
         <Button
             android:id="@+id/btnvolminori"
             style="@style/Widget.AppCompat.Button.Colored"
@@ -73,8 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="80dp"
+            android:layout_marginStart="80dp"
             android:background="@drawable/btnvoladulti"
-            android:text="Pachet Voluntari Minori" />
+            android:text="@string/pachet_voluntari_minori" />
         </LinearLayout>
 
 

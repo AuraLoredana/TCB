@@ -1,23 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
 
     <item android:id="@+id/about"
         android:icon="@drawable/taxi"
-        android:title="Despre noi"/>
+        android:title="@string/despre_noi" />
     <item android:id="@+id/candy"
         android:icon="@drawable/candy"
-        android:title="Proiectele noastre"/>
+        android:title="@string/proiectele_noastre" />
     <item android:id="@+id/voluntar"
         android:icon="@drawable/volunteer"
-        android:title="Devino voluntar"/>
+        android:title="@string/devino_voluntar" />
     <item android:id="@+id/doneaza"
         android:icon="@drawable/donate"
-        android:title="Doneaza"/>
+        android:title="@string/doneazahomepage" />
     <item android:id="@+id/chat"
         android:icon="@drawable/chat"
-        android:title="Chat"/>
+        android:title="@string/chat" />
     <item android:id="@+id/contact"
         android:icon="@drawable/contact"
-        android:title="Contact"/>
+        android:title="@string/contact" />
+
 
 </menu>
