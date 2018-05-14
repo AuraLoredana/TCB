@@ -126,7 +126,7 @@ public class Chat extends AppCompatActivity {
         textView.setLayoutParams(lp2);
         textView.setTextSize((float) 14.00);
         //textView.setPadding(10, 10, 10, 10);
-        lp2.setMargins(10, 10, 10, 10);
+        lp2.setMargins(5, 5, 5, 5);
         layout.addView(textView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }

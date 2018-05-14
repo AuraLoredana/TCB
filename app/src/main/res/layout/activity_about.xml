@@ -1,45 +1,34 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
-    <LinearLayout
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.aura.popescu.tcb.About">
+
+    <com.aura.popescu.tcb.TrackingScrollView
+        android:id="@+id/scroller"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="251dp"
-            android:paddingBottom="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/multumiri" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:layout_marginStart="120dp"
-            android:gravity="start"
-            android:text="@string/o_scurta_istorisire"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_long"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif"
-            android:gravity="start"
-            android:padding="10dp"
-            android:text="@string/desprenoi"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/multumiri" />
+
+                <include layout="@layout/content" />
+            </LinearLayout>
 
 
+        </FrameLayout>
 
-    </LinearLayout>
-</ScrollView>
+    </com.aura.popescu.tcb.TrackingScrollView>
+
+</merge>

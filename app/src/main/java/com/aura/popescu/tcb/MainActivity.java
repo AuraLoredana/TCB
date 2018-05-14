@@ -12,19 +12,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
     Spinner spinner;
     Locale myLocale;
     String currentLanguage = "ro", currentLang;
@@ -32,22 +28,30 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle t;
     private NavigationView nv;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.language_menu, menu);
+        return true;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         currentLanguage = getIntent().getStringExtra(currentLang);
 
-        spinner = findViewById(R.id.spinner1);
+      /*  spinner = findViewById(R.id.spinner1);
 
         List<String> list = new ArrayList<String>();
         //list.add(String.valueOf(getDrawable(R.drawable.flag_ro)));
         //list.add(String.valueOf(getDrawable(R.drawable.flag_us))) ;
         list.add("Lang");
         list.add("Romanian");
-        list.add("English");
+        list.add("English");*/
 
 
         dl = findViewById(R.id.activity_main);
@@ -94,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+
+        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -118,9 +123,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });
+        });*/
     }
 
+
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        System.exit(0);
+    }
     public void setLocale(String localeName) {
         if (!localeName.equals(currentLanguage)) {
             myLocale = new Locale(localeName);
@@ -136,26 +150,42 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Language already selected!", Toast.LENGTH_SHORT).show();
         }
     }
-
-    public void onBackPressed() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
-        System.exit(0);
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if(t.onOptionsItemSelected(item))
             return true;
 
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.select:
+
+                return true;
+            case R.id.us:
+                setLocale("en");
+                Locale locale = new Locale("en");
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                Toast.makeText(this, "Locale in English !", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.rom:
+                setLocale("ro");
+                Locale locale1 = new Locale("ro");
+                Locale.setDefault(locale1);
+                Configuration config1 = new Configuration();
+                config1.locale = locale1;
+                getBaseContext().getResources().updateConfiguration(config1, getBaseContext().getResources().getDisplayMetrics());
+                Toast.makeText(this, "Locale in Romanian !", Toast.LENGTH_LONG).show();
+            default:
+                // Do nothing.
+        }
+
+        return true;
 
 
     }
+
 
 }
 

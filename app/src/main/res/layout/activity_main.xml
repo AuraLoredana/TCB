@@ -16,21 +16,10 @@
     android:layout_height="wrap_content"
     android:scaleType="centerCrop"
     android:src="@drawable/donation" />
+
+
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:background="@drawable/world" />
-
-
-    </LinearLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nv"
         android:layout_width="wrap_content"
