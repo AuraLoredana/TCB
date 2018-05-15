@@ -2,10 +2,7 @@ package com.aura.popescu.tcb;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class Projects extends AppCompatActivity {
     ListView list;
@@ -35,7 +32,7 @@ public class Projects extends AppCompatActivity {
         CustomList adapter = new CustomList(Projects.this, mTestArray, listviewImage);
         list = findViewById(R.id.list);
         list.setAdapter(adapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
@@ -43,7 +40,7 @@ public class Projects extends AppCompatActivity {
                 Toast.makeText(Projects.this, "You Clicked at " + mTestArray[+position], Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
     }
 

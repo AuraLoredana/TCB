@@ -92,6 +92,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.contact:
                         Toast.makeText(MainActivity.this, R.string.contact, Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this, Contact.class));
+                        break;
+                    case R.id.rate:
+                        Toast.makeText(MainActivity.this, R.string.rate_us, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, RatingActivity.class));
+                        break;
+                    case R.id.share:
+                        Toast.makeText(MainActivity.this, R.string.share, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, ShareActivity.class));
+                        break;
                     default:
                         return true;
                 }

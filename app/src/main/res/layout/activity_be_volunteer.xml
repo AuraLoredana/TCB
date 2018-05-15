@@ -1,84 +1,35 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.aura.popescu.tcb.About">
+
+    <com.aura.popescu.tcb.TrackingScrollViewVol
+        android:id="@+id/scroller"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="251dp"
-            android:paddingBottom="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/voluntaritcb" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:gravity="start"
-            android:padding="15dp"
-            android:text="@string/inceput"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textl"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="60dp"
-            android:fontFamily="sans-serif"
-            android:gravity="start"
-            android:padding="15dp"
-            android:text="@string/cum_pot_sa_devin_voluntar_al_asociatiei"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="251dp"
+                    android:paddingBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/voluntaritcb" />
 
-        <TextView
-            android:id="@+id/textdescvol"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:fontFamily="sans-serif"
-            android:gravity="start"
-            android:padding="15dp"
-            android:text="@string/descrierevoluntariat"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-
-
-             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-        <Button
-            android:id="@+id/btnvoladulti"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/btnvoladulti"
-            android:text="@string/pachet_voluntari_adulti" />
-        <Button
-            android:id="@+id/btnvolminori"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginStart="80dp"
-            android:background="@drawable/btnvoladulti"
-            android:text="@string/pachet_voluntari_minori" />
+                <include layout="@layout/contentvolunteer" />
         </LinearLayout>
 
 
-    </LinearLayout>
-</ScrollView>
+        </FrameLayout>
+
+    </com.aura.popescu.tcb.TrackingScrollViewVol>
+
+</merge>

@@ -88,6 +88,9 @@
     <string name="contact">Contact</string>
     <string name="chat">Chat</string>
     <string name="va_multumim">Va multumim!</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+    <string name="rate_this_app">Rate this app</string>
 
 
 </resources>

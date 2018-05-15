@@ -16,6 +16,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,7 +28,9 @@
         <activity android:name=".Contact" />
         <activity android:name=".Register" />
         <activity android:name=".Chat" />
-        <activity android:name=".Users"></activity>
+        <activity android:name=".Users" />
+        <activity android:name=".RatingActivity" />
+        <activity android:name=".ShareActivity"></activity>
     </application>
 
 </manifest>

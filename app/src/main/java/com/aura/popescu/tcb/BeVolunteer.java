@@ -1,21 +1,46 @@
 package com.aura.popescu.tcb;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class BeVolunteer extends AppCompatActivity {
+    private ImageView mImage1;
+    private int mImageHeight1;
+
+    private static void centerViewVertically(View view) {
+        view.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                v.setTranslationY(-v.getHeight() / 2);
+                v.removeOnLayoutChangeListener(this);
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_be_volunteer);
 
-        Button btnvoladulti = (Button)findViewById(R.id.btnvoladulti);
+        mImage1 = findViewById(R.id.image1);
+        mImageHeight1 = mImage1.getLayoutParams().height;
+
+        ((TrackingScrollViewVol) findViewById(R.id.scroller)).setOnScrollChangedListener(
+                new TrackingScrollViewVol.OnScrollChangedListener() {
+                    @Override
+                    public void onScrollChanged(TrackingScrollViewVol source, int l, int t, int oldl, int oldt) {
+                        handleScroll(source, t);
+                    }
+                }
+        );
+
+        Button btnvoladulti = findViewById(R.id.btnvoladulti);
         btnvoladulti.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -29,7 +54,7 @@ public class BeVolunteer extends AppCompatActivity {
             }
         });
 
-        Button btnvolminori = (Button)findViewById(R.id.btnvolminori);
+        Button btnvolminori = findViewById(R.id.btnvolminori);
         btnvolminori.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -43,4 +68,21 @@ public class BeVolunteer extends AppCompatActivity {
             }
         });
     }
+
+    private void handleScroll(TrackingScrollViewVol source, int top) {
+        int scrolledImageHeight = Math.min(mImageHeight1, Math.max(0, top));
+
+        ViewGroup.MarginLayoutParams imageParams = (ViewGroup.MarginLayoutParams) mImage1.getLayoutParams();
+        int newImageHeight = mImageHeight1 - scrolledImageHeight;
+        if (imageParams.height != newImageHeight) {
+            // Transfer image height to margin top
+            imageParams.height = newImageHeight;
+            imageParams.topMargin = scrolledImageHeight;
+
+            // Invalidate view
+            mImage1.setLayoutParams(imageParams);
+        }
+    }
+
 }
+
