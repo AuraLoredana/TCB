@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,10 +33,15 @@ public class ChatWithUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_with_us);
 
-        registerUser = (TextView) findViewById(R.id.register);
-        username = (EditText)findViewById(R.id.username);
-        password = (EditText)findViewById(R.id.password);
-        loginButton = (Button)findViewById(R.id.loginButton);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        registerUser = findViewById(R.id.register);
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        loginButton = findViewById(R.id.loginButton);
 
         registerUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,11 +58,9 @@ public class ChatWithUs extends AppCompatActivity {
 
                 if(user.equals("")){
                     username.setError("can't be blank");
-                }
-                else if(pass.equals("")){
+                } else if(pass.equals("")){
                     password.setError("can't be blank");
-                }
-                else{
+                } else{
                     String url = "https://tcbfirebaseproject.firebaseio.com/users.json";
                     final ProgressDialog pd = new ProgressDialog(ChatWithUs.this);
                     pd.setMessage("Loading...");
@@ -67,20 +71,17 @@ public class ChatWithUs extends AppCompatActivity {
                         public void onResponse(String s) {
                             if(s.equals("null")){
                                 Toast.makeText(ChatWithUs.this, "user not found", Toast.LENGTH_LONG).show();
-                            }
-                            else{
+                            } else{
                                 try {
                                     JSONObject obj = new JSONObject(s);
 
                                     if(!obj.has(user)){
                                         Toast.makeText(ChatWithUs.this, "user not found", Toast.LENGTH_LONG).show();
-                                    }
-                                    else if(obj.getJSONObject(user).getString("password").equals(pass)){
+                                    } else if(obj.getJSONObject(user).getString("password").equals(pass)){
                                         UserDetails.username = user;
                                         UserDetails.password = pass;
                                         startActivity(new Intent(ChatWithUs.this, Users.class));
-                                    }
-                                    else {
+                                    } else {
                                         Toast.makeText(ChatWithUs.this, "incorrect password", Toast.LENGTH_LONG).show();
                                     }
                                 } catch (JSONException e) {
@@ -104,5 +105,19 @@ public class ChatWithUs extends AppCompatActivity {
 
             }
         });
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //Write your logic here
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

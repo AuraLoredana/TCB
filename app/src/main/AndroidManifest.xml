@@ -31,6 +31,10 @@
         <activity android:name=".Users" />
         <activity android:name=".RatingActivity" />
         <activity android:name=".ShareActivity"></activity>
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
     </application>
 
 </manifest>

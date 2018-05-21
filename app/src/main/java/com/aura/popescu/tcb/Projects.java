@@ -2,6 +2,7 @@ package com.aura.popescu.tcb;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 public class Projects extends AppCompatActivity {
@@ -28,20 +29,29 @@ public class Projects extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projects);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         mTestArray = getResources().getStringArray(R.array.projectsArray);
         CustomList adapter = new CustomList(Projects.this, mTestArray, listviewImage);
         list = findViewById(R.id.list);
         list.setAdapter(adapter);
-        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(Projects.this, "You Clicked at " + mTestArray[+position], Toast.LENGTH_SHORT).show();
+    }
 
-            }
-        });*/
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //Write your logic here
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

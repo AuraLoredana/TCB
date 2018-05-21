@@ -15,13 +15,13 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    Spinner spinner;
+
     Locale myLocale;
     String currentLanguage = "ro", currentLang;
     private DrawerLayout dl;
@@ -41,18 +41,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView textview = new TextView(MainActivity.this);
 
         currentLanguage = getIntent().getStringExtra(currentLang);
-
-      /*  spinner = findViewById(R.id.spinner1);
-
-        List<String> list = new ArrayList<String>();
-        //list.add(String.valueOf(getDrawable(R.drawable.flag_ro)));
-        //list.add(String.valueOf(getDrawable(R.drawable.flag_us))) ;
-        list.add("Lang");
-        list.add("Romanian");
-        list.add("English");*/
-
 
         dl = findViewById(R.id.activity_main);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);

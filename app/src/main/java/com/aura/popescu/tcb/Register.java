@@ -2,8 +2,9 @@ package com.aura.popescu.tcb;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,10 +33,15 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        username = (EditText)findViewById(R.id.username);
-        password = (EditText)findViewById(R.id.password);
-        registerButton = (Button)findViewById(R.id.registerButton);
-        login = (TextView)findViewById(R.id.login);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        registerButton = findViewById(R.id.registerButton);
+        login = findViewById(R.id.login);
 
         Firebase.setAndroidContext(this);
 
@@ -115,5 +121,17 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //Write your logic here
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

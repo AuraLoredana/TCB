@@ -13,6 +13,11 @@ public class ShareActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
     }
 
 
@@ -43,9 +48,16 @@ public class ShareActivity extends AppCompatActivity {
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                 startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
                 return true;
-
+            case android.R.id.home:
+                //Write your logic here
+                this.finish();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
+
         }
+
+
     }
+
 }

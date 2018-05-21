@@ -2,8 +2,9 @@ package com.aura.popescu.tcb;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -35,8 +36,14 @@ public class Users extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
-        usersList = (ListView)findViewById(R.id.usersList);
-        noUsersText = (TextView)findViewById(R.id.noUsersText);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
+        usersList = findViewById(R.id.usersList);
+        noUsersText = findViewById(R.id.noUsersText);
 
         pd = new ProgressDialog(Users.this);
         pd.setMessage("Loading...");
@@ -100,5 +107,17 @@ public class Users extends AppCompatActivity {
         }
 
         pd.dismiss();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //Write your logic here
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
