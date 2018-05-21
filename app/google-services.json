@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "530072793662",
+    "firebase_url": "https://tcbfirebaseproject.firebaseio.com",
+    "project_id": "tcbfirebaseproject",
+    "storage_bucket": "tcbfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530072793662:android:f2c87d2aae5b3bb2",
+        "android_client_info": {
+          "package_name": "com.aura.popescu.tcb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530072793662-os9lj26km5e3kohvmafhc8s5tb6a1n8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aura.popescu.tcb",
+            "certificate_hash": "29fafb03db72838d5dadac44d1d7b3954c2e626c"
+          }
+        },
+        {
+          "client_id": "530072793662-tnfui0oeldmj6lqri5ri866ns8nntra8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACl3JUNdw7rTnXGRzD1IojsJsRcs7VunU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530072793662-tnfui0oeldmj6lqri5ri866ns8nntra8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

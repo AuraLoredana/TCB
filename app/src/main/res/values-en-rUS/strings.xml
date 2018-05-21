@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">TCB</string>
+    <string name="compose_email">Compose Email</string>
+    <string name="Close" />
+    <string name="Open" />
+    <string name="desprenoi">" "It all started with a simple initiative in the spring of 2012 when the taxi driver Ion Cristian Roman wanted to turn a simple trip through Bucharest into a special one. Customers were getting candy, listening to a nice music, or getting an unprecedented tour of the capital. Then the taxi driver thought he could collect books and toys for hospital children, and then go to the Marie Curie Emergency Clinical Hospital every Saturday.\n
+"
+"
+       Over time, hundreds of volunteers and donors, partners in good deeds, have joined in humanitarian projects dedicated to mothers and children in hospitals!
+
+\n
+"
+"
+      The Taxi with Candy is, in fact, a metaphor. Its simple gestures that turn into good deeds, small gestures that can change the lives of others. It is a metaphor of the good deeds anyone can do, because in this taxi everyone can climb!\n
+"
+"
+       The taxi has a few special destinations: pediatric hospitals and schools with special needs in Bucharest.\n
+"
+"
+       Volunteers arrive there to bring smiles to sick and disabled children. In other words, the Candy Cabin is environmentally friendly, it works with love, the love of those who choose to share free time, hugs and stories, children who need hope and encouragement.\n
+"
+"
+        Volunteers of all ages, with various professional backgrounds in Bucharest and abroad, come to read stories to children in hospitals, or to help people with disabilities find their way to life, self-esteem and sense of purpose.\n
+"
+"
+       The association needs support and volunteers in all of its projects!</string>
+    <string name="o_scurta_istorisire">A SHORT STORY</string>
+    <string name="inceput">It all started with a simple initiative in the spring of 2012 when the taxi driver Ion Cristian Roman wanted to turn a simple trip through Bucharest into a special one. \n
+"
+"
+        Customers were getting candy, listening to a nice music, or getting an unprecedented tour of the capital. Then the taxi driver thought he could collect books and toys for hospital children, and then go to the Marie Curie Emergency Clinical Hospital every Saturday.\n
+"
+"
+        Over time, hundreds of volunteers and donors, partners in good deeds, have joined in humanitarian projects dedicated to mothers and children in hospitals!
+
+</string>
+    <string name="cum_pot_sa_devin_voluntar_al_asociatiei">HOW CAN I BECOME A VOLUNTEER?</string>
+    <string name="descrierevoluntariat">The Candy Taxi works only through the love and dedication of those who choose to share their spare time with less fortunate children in the capital. If you want to join us, download one of the volunteer packages below, and get in touch with us!</string>
+    <string name="detaliilenoastre">OUR DETAILS
+"
+"
+        \n Address: Bulevardul Unirii no. 57, bl. E4, sc. 2, et. 3, sector 3, Bucharest, Romania, 030827
+        \n
+"
+"
+        C.I.F. 36389716 – Series A No. De 1025877\n
+"
+"
+        Phone: 0755-044-247 \n
+"
+"
+        Email: asociatiataxiulcubomboane@gmail.com</string>
+    <string name="donatiidirecte">DIRECT DONATIONS\n
+"
+"
+        CEC Bank Traian branch\n
+        IBAN RON: RO75CECEB30930RON4291146 \n
+        IBAN EUR: RO75CECEB309C1EUR4291300</string>
+    <string name="undenegasiti">WHERE YOU CAN FIND US\n
+"
+"
+        Institute for Health of Mother and Child "Alfred Rusescu" – Tuesday from 18 00\n
+        Emergency Clinical Hospital for Children "Grigore Alexandrescu" – Wednesday from 18 00\n
+        Clinical Emergency Hospital for Children "Marie Sklodowska Curie" – Thursday from 18 00\n
+        Bomboland – inside the building Flaros SA</string>
+
+    <string name="pachet_voluntari_adulti">Adult Voluntary Package</string>
+    <string name="pachet_voluntari_minori">Minor Voluntary Package</string>
+    <string name="doneaza">Donate!</string>
+    <string name="vinereasperantei">FRIDAYS OF HOPE</string>
+    <string name="canutacubomb">THE CUP WITH CANDY - The Cup With Candy  is a yearly campaign on June 1. In 2016, just the first edition, the children in hospitals received sweets and cartoons with drawings and encouraging messages from nearly 2,000 people!</string>
+    <string name="language_setting">langset</string>
+    <string name="proiectele_noastre">Our Projects</string>
+    <string name="despre_noi">About</string>
+    <string name="devino_voluntar">Become a volunteer</string>
+    <string name="doneazahomepage">Donate</string>
+    <string name="va_multumim">Thank You!</string>
+    <string name="canuta">THE CUP WITH CANDY - The Cup With Candy  is a yearly campaign on June 1. In 2016, just the first edition, the children in hospitals received sweets and cartoons with drawings and encouraging messages from nearly 2,000 people!</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+    <string name="rate_this_app">Rate this app</string>
+
+
+</resources>
