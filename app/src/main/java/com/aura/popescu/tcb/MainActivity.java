@@ -99,31 +99,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                switch (position) {
-                    case 0:
-                        break;
-                    case 1:
-                        setLocale("ro");
-                        //getDrawable(R.drawable.flag_ro);
-                        break;
-                    case 2:
-                        setLocale("en");
-                        //getDrawable(R.drawable.flag_us);
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });*/
     }
 
 
@@ -147,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             refresh.putExtra(currentLang, localeName);
             startActivity(refresh);
         } else {
-            Toast.makeText(MainActivity.this, "Language already selected!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, R.string.langalreadyselected, Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -167,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 Configuration config = new Configuration();
                 config.locale = locale;
                 getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-                Toast.makeText(this, "Locale in English !", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.localeineng, Toast.LENGTH_LONG).show();
                 break;
             case R.id.rom:
                 setLocale("ro");
@@ -176,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 Configuration config1 = new Configuration();
                 config1.locale = locale1;
                 getBaseContext().getResources().updateConfiguration(config1, getBaseContext().getResources().getDisplayMetrics());
-                Toast.makeText(this, "Locale in Romanian !", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.localero, Toast.LENGTH_LONG).show();
             default:
                 // Do nothing.
         }

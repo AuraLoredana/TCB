@@ -29,7 +29,6 @@ public class Chat extends AppCompatActivity {
     EditText messageArea;
     ScrollView scrollView;
     Firebase reference1, reference2;
-    Firebase storageRef;
     private Uri filePath;
     private ImageView chooseButton;
     private ImageView uploadBtn;

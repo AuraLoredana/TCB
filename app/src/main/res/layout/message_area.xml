@@ -12,6 +12,8 @@
         android:layout_height="25dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/upload_icon"
         android:src="@drawable/uploadicon" />
 
     <EditText
@@ -19,8 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_weight="1"
-        android:hint="Write a message..."
+        android:hint="@string/write_a_message"
         android:maxHeight="80dp"
         android:textColor="#CFD8DC"
         android:textColorHint="#CFD8DC" />
@@ -28,16 +31,14 @@
     <TextView
         android:id="@+id/message_time"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/message_user"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:layout_height="wrap_content" />
 
     <ImageView
         android:id="@+id/sendButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="3"
+        android:contentDescription="@string/icon_send"
         android:padding="4dp"
         android:src="@android:drawable/ic_menu_send" />
 

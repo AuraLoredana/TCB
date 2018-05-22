@@ -20,6 +20,7 @@
                     android:id="@+id/image1"
                     android:layout_width="wrap_content"
                     android:layout_height="251dp"
+                    android:contentDescription="@string/volunteer_in_tcb"
                     android:paddingBottom="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/voluntaritcb" />

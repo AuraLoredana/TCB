@@ -57,32 +57,32 @@ public class ChatWithUs extends AppCompatActivity {
                 pass = password.getText().toString();
 
                 if(user.equals("")){
-                    username.setError("can't be blank");
+                    username.setError(getString(R.string.cantbeblank));
                 } else if(pass.equals("")){
-                    password.setError("can't be blank");
+                    password.setError(getString(R.string.cantbeblank));
                 } else{
                     String url = "https://tcbfirebaseproject.firebaseio.com/users.json";
                     final ProgressDialog pd = new ProgressDialog(ChatWithUs.this);
-                    pd.setMessage("Loading...");
+                    pd.setMessage(getString(R.string.loading));
                     pd.show();
 
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
                         @Override
                         public void onResponse(String s) {
                             if(s.equals("null")){
-                                Toast.makeText(ChatWithUs.this, "user not found", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ChatWithUs.this, R.string.usernotfound, Toast.LENGTH_LONG).show();
                             } else{
                                 try {
                                     JSONObject obj = new JSONObject(s);
 
                                     if(!obj.has(user)){
-                                        Toast.makeText(ChatWithUs.this, "user not found", Toast.LENGTH_LONG).show();
-                                    } else if(obj.getJSONObject(user).getString("password").equals(pass)){
+                                        Toast.makeText(ChatWithUs.this, R.string.usernotfound, Toast.LENGTH_LONG).show();
+                                    } else if (obj.getJSONObject(user).getString(getString(R.string.password)).equals(pass)) {
                                         UserDetails.username = user;
                                         UserDetails.password = pass;
                                         startActivity(new Intent(ChatWithUs.this, Users.class));
                                     } else {
-                                        Toast.makeText(ChatWithUs.this, "incorrect password", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(ChatWithUs.this, R.string.incorrectpass, Toast.LENGTH_LONG).show();
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();

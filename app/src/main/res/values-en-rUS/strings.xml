@@ -3,6 +3,10 @@
     <string name="compose_email">Compose Email</string>
     <string name="Close" />
     <string name="Open" />
+    <string-array name="lang_select">
+        <item>Romanian</item>
+        <item>English</item>
+    </string-array>
     <string name="desprenoi">" "It all started with a simple initiative in the spring of 2012 when the taxi driver Ion Cristian Roman wanted to turn a simple trip through Bucharest into a special one. Customers were getting candy, listening to a nice music, or getting an unprecedented tour of the capital. Then the taxi driver thought he could collect books and toys for hospital children, and then go to the Marie Curie Emergency Clinical Hospital every Saturday.\n
 "
 "
@@ -67,18 +71,44 @@
     <string name="pachet_voluntari_adulti">Adult Voluntary Package</string>
     <string name="pachet_voluntari_minori">Minor Voluntary Package</string>
     <string name="doneaza">Donate!</string>
-    <string name="vinereasperantei">FRIDAYS OF HOPE</string>
-    <string name="canutacubomb">THE CUP WITH CANDY - The Cup With Candy  is a yearly campaign on June 1. In 2016, just the first edition, the children in hospitals received sweets and cartoons with drawings and encouraging messages from nearly 2,000 people!</string>
     <string name="language_setting">langset</string>
     <string name="proiectele_noastre">Our Projects</string>
     <string name="despre_noi">About</string>
     <string name="devino_voluntar">Become a volunteer</string>
     <string name="doneazahomepage">Donate</string>
     <string name="va_multumim">Thank You!</string>
-    <string name="canuta">THE CUP WITH CANDY - The Cup With Candy  is a yearly campaign on June 1. In 2016, just the first edition, the children in hospitals received sweets and cartoons with drawings and encouraging messages from nearly 2,000 people!</string>
     <string name="rate_us">Rate us</string>
     <string name="share">Share</string>
     <string name="rate_this_app">Rate this app</string>
+    <string name="langalreadyselected">Language already selected!</string>
+    <string name="localeineng">Locale in English !</string>
+    <string name="localero">Locale in Romanian !</string>
+    <string name="thanks">Thanks</string>
+    <string name="volunteer_in_tcb">Volunteer in TCB</string>
+    <string name="enter_username">enter username</string>
+    <string name="enter_password">enter password</string>
+    <string name="login">Login</string>
+    <string name="click_here_to_register">Click here to register</string>
+    <string name="asociatiataxiulcubomboane_gmail_com">asociatiataxiulcubomboane@gmail.com</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="characters_of_the_story">Characters of the story</string>
+    <string name="donation">Donation</string>
+    <string name="register">Register</string>
+    <string name="click_here_to_login">Click here to login</string>
+    <string name="click_to_open_sharing_option">Click to open sharing option</string>
+    <string name="no_users_found">No users found!</string>
+    <string name="img">img</string>
+    <string name="upload_icon">upload Icon</string>
+    <string name="write_a_message">Write a message...</string>
+    <string name="icon_send">icon send</string>
+    <string name="logo_tcb">logo tcb</string>
+    <string name="cantbeblank">can\'t be blank</string>
+    <string name="loading">Loading...</string>
+    <string name="usernotfound">user not found</string>
+    <string name="password">password</string>
+    <string name="incorrectpass">incorrect password</string>
 
 
 </resources>
